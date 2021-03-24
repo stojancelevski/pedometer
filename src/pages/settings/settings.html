@@ -1,0 +1,18 @@
+<ion-header>
+     <ion-toolbar color="heade">
+        <ion-title text-center> User Settings</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content style="background:beige">
+    <ion-list>
+        <ion-item style="background: rgba(76, 175, 80, 0)">
+            <ion-label floating color="progres">Daily planned walking time(in minutes).</ion-label>
+            <ion-input type="number" [(ngModel)]="minutes"></ion-input>
+        </ion-item>
+
+    </ion-list>
+    <div padding>
+        <button ion-button block color="dugme" (tap)="update()">Set</button>
+    </div>
+</ion-content>

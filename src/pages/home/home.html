@@ -1,17 +1,33 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+    <ion-navbar color="heade">
+        <ion-title text-center>Pedometer</ion-title>
+    </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content padding text-center style="background:beige">
+    <img src="assets/imgs/Pedometer-Autumn.png" width="205px" height="150px">
+    <div>
+        <ion-card-title>
+            Your Goal
+        </ion-card-title>
+        <ion-card-content>
+            <ion-badge primary color="heade" style="font-size: 20px">{{goal}} Steps</ion-badge>
+        </ion-card-content>
+    </div>
+
+
+    <div>
+        <ion-card-title>
+            Your Progress
+        </ion-card-title>
+        <ion-card-content>
+            <div class="progress-outer">
+                <div class="progress-inner" [style.width]="percentage + '%'">
+                    {{percentage}}%
+                </div>
+            </div>
+            <ion-badge color="heade">{{steps}}</ion-badge>
+        </ion-card-content>
+    </div>
+    <button ion-button block color="dugme" (click)='start()'> Start</button>
 </ion-content>
